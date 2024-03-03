@@ -21,12 +21,6 @@ public class PlayManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public static void FlipPlayerGravity()
     {
         if (playerGravityController != null)

@@ -10,16 +10,4 @@ public class Spawner : MonoBehaviour, ITriggerable
     {
         Instantiate(spawningObject, transform.position, transform.rotation);
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

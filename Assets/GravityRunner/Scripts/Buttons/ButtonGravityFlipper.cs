@@ -5,17 +5,6 @@ using UnityEngine;
 public class ButtonGravityFlipper : ButtonBase
 {
     Prop heldingProp;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public override void OnButtonPressed()
     {
@@ -99,27 +88,11 @@ public class ButtonGravityFlipper : ButtonBase
         PlayManager.ReplaceCurrentGravityFlipper(this);
     }
 
-    public override void OnTriggered()
-    {
-        //PlayManager.FlipPlayerGravity(); //TODO: Change
-    }
-
     protected override IEnumerator CooldownCoroutine()
     {
         string name = gameObject.name;
         isPressed = true;
-        /*
-        if (heldingProp != null)
-        {
-            //remove glowing effect
-            heldingProp.gameObject.layer = LayerMask.NameToLayer("Default");
-            gameObject.layer = LayerMask.NameToLayer("Default");
 
-            heldingProp.rb.constraints = RigidbodyConstraints.None;
-            heldingProp.canHeld = true;
-            heldingProp = null;// reset touching prop
-        }
-        */
         yield return new WaitForSeconds(cooldownTime);
         isPressed = false;
     }
@@ -141,5 +114,10 @@ public class ButtonGravityFlipper : ButtonBase
             heldingProp.canHeld = true;
             heldingProp = null;// reset touching prop
         }
+    }
+
+    public override void OnTriggered()
+    {
+        return;
     }
 }

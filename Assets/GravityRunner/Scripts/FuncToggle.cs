@@ -26,7 +26,6 @@ public class FuncToggle : MonoBehaviour, ITriggerable
         isToggledOn = true;
         gameObject.SetActive(true);
         StopAllCoroutines();
-        //Debug.Log(gameObject.activeSelf+ " " + gameObject.name);
         StartCoroutine(AutoDisableCoroutine());
     }
 
@@ -38,17 +37,5 @@ public class FuncToggle : MonoBehaviour, ITriggerable
         isToggledOn = false;
         gameObject.SetActive(false);
 
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

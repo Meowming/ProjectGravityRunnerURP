@@ -17,17 +17,6 @@ public class Prop : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        /*
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            isReversed = !isReversed;
-        }
-        */
-    }
-
     private void FixedUpdate()
     {
 

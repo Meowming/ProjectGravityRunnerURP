@@ -66,28 +66,6 @@ public class FPSController : MonoBehaviour
 
         #region Handles Jumping
         bool isTouchingGroud = Physics.CheckSphere(playerFeetPosition.position, feetSkinRadius, ignoredLayerMask, QueryTriggerInteraction.Ignore);// make sure to ignore triggers
-        /*
-        if (!canMove)
-            return;
-        if (isTouchingGroud)
-        {
-            if (Input.GetButton("Jump"))
-            {
-                moveDirection.y = jumpPower * -1 * Mathf.Sign(gravity);
-                print("jump, " + moveDirection.y.ToString());
-            }
-            else
-            {
-                moveDirection.y = movementDirectionY;
-                print("move, " + moveDirection.y.ToString());
-            }
-        }
-        else
-        {
-            moveDirection.y += gravity * Time.deltaTime;
-            print("fall, " + moveDirection.y.ToString());
-        }
-        */
         
         if (Input.GetButton("Jump") && canMove && isTouchingGroud)
         {           

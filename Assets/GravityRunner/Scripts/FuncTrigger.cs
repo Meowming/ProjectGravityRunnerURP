@@ -22,18 +22,6 @@ public class FuncTrigger : MonoBehaviour, ITriggerable
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if ((allowedLayers & (1 << other.gameObject.layer)) != 0)// must be allowed layer
